@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib.h>
+//#include<stdlib.h>
 void push();
 void pop();
 void traverse();
@@ -34,7 +34,7 @@ int main(){
         break;
       }
       printf("\npress (1-->continue or any key-->discontinue)");
-      fflush(stdin);
+      //fflush(stdin);
       scanf("%d",&n);
    
     } while (n==1);
