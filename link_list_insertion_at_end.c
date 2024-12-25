@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct node {
+    int data ;
+    struct node *next ;
+
+}*head,*second,*third,*fourth;
+
+void Travarsal( struct node *ptr){
+    while(ptr != NULL){
+        printf("element : %d \n", ptr->data);
+        ptr=ptr->next;
+    }
+}
+
+
+struct node* insertion_in_end(struct node*head,int data){
+    struct node*ptr = (struct node*)malloc(sizeof(struct node));
+    struct node *p = head;
+    while (p->next!=NULL){
+        p=p->next;
+    }
+    p->next=ptr;
+    ptr->next=NULL;
+    ptr->data=data;
+    return head;
+
+
+}
+
+
+int main (){
+head = (struct node*) malloc(sizeof(struct node));
+second = (struct node*) malloc(sizeof(struct node));
+third = (struct node*) malloc(sizeof(struct node));
+fourth = (struct node*) malloc(sizeof(struct node));
+ 
+
+head->data=69;
+head->next=second;
+
+second->data=42;
+second->next=third;
+
+third->data=21;
+third->next=fourth;
+
+fourth->data=86;
+fourth->next=NULL;
+
+
+Travarsal(head);
+printf("\n");
+head=insertion_in_end(head,49);
+Travarsal(head);
+
+
+
+return 0;
+};
