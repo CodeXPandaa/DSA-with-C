@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-// Function to swap two elements
+
 void swap(int* a, int* b) {
     int t = *a;
     *a = *b;
     *b = t;
 }
 
-// Function to partition the array
+
 int partition(int array[], int low, int high) {
     int pivot = array[high];
     int i = (low - 1);
@@ -22,7 +22,7 @@ int partition(int array[], int low, int high) {
     return (i + 1);
 }
 
-// Function to perform quick sort
+
 void quickSort(int array[], int low, int high) {
     if (low < high) {
         int pi = partition(array, low, high);
@@ -32,7 +32,7 @@ void quickSort(int array[], int low, int high) {
     }
 }
 
-// Function to print the array
+
 void printArray(int array[], int size) {
     for (int i = 0; i < size; i++) {
         printf("%d ", array[i]);
