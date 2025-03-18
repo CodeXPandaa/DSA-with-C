@@ -41,7 +41,7 @@ void printArray(int array[], int size) {
 }
 
 int main() {
-    int data[] = {8, 7, 6, 1, 0, 9, 2};
+    int data[] = {35,50,15,25,80,90,45,20};
     int n = sizeof(data) / sizeof(data[0]);
 
     printf("Unsorted Array:\n");
